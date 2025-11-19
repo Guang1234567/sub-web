@@ -227,13 +227,22 @@ export default {
           ssd: "ssd",
           sssub: "sssub",
           ssr: "ssr",
-          ClashR: "clashr",          
+          ClashR: "clashr",
           V2Ray: "v2ray",
           Trojan: "trojan",
           Surge3: "surge&ver=3",
         },
         backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
         remoteConfig: [
+          {
+            label: "localhost",
+            options: [
+              {
+                label: "http://127.0.0.1:3000/Clash/config/ACL4SSR_Online_Full_AdblockPlus.ini",
+                value: "http://127.0.0.1:3000/Clash/config/ACL4SSR_Online_Full_AdblockPlus.ini"
+              }
+            ]
+          },
           {
             label: "universal",
             options: [
@@ -309,11 +318,11 @@ export default {
       form: {
         sourceSubUrl: "",
         clientType: "",
-        customBackend: "",
-        remoteConfig: "",
+        customBackend: defaultBackend,
+        remoteConfig: "http://127.0.0.1:3000/Clash/config/ACL4SSR_Online_Full_AdblockPlus.ini",
         excludeRemarks: "",
         includeRemarks: "",
-        filename: "",
+        filename: "xxx_ACL4SSR_Online_Full_AdblockPlus.yaml",
         emoji: true,
         nodeList: false,
         extraset: false,
